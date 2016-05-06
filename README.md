@@ -1,11 +1,11 @@
 # data-driven-testing-soapui
 Data driven testing of SOAP webservices
 
-First create config.properties file at some location in your machine. having 
+First create config.properties file at some location in your machine, having 
 basepath and projectname properties
 
-basepath is the location of testdata and test evidences operation wise
-projectname is the operation name that you wish to execute in soap ui
+basepath is the location of testdata and test evidences operation wise,
+projectname is the operation name that you wish to execute in soap ui.
 
 Replace the <Full path of config.properties goes here> (line 13) in data-driven.groovy with full path of config.properties file.
 
