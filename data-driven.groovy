@@ -24,7 +24,7 @@ def assertionsPath = basepath+"test-input\\assertions.csv"
 //excluded test scenario numbers
 def exclded=[]
 //Test step 
-def teststepname = "getSubscriptionUsageByAgreement"
+def teststepname = "<Name of the test step on soap ui having all the fields>"
 //wait step (for capturing logs then make it as true) and set pauseInterval as 5 or more
 def pause= false
 def pauseInterval= 8
