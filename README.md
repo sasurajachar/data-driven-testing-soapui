@@ -13,3 +13,13 @@ Now create a test request under the operation, containing all the fields as per 
 
 Next create a groovy step in soap ui under corresponding operation. and paste the data-driven.groovy and click run.
 
+Folder structure
+<basepath>
+    |
+    -------<project name>
+                |
+                -------test-input
+                           test-data.csv
+                           assertions.csv
+                -------test-output
+
