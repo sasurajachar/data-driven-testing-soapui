@@ -184,6 +184,7 @@ for(int i =1;  i < rowsize;  i++)
 	def assertion
 	for(asrt in asrtlist){
 		keyval=asrt.split("=")
+		//Ignore namespace
 		if(keyval[0].contains(":")){
 			namespace=keyval[0].substring(keyval[0].lastIndexOf("//"),keyval[0].indexOf(":"))
 			keyval[0]=keyval[0].replace(namespace,"//*")
@@ -191,7 +192,7 @@ for(int i =1;  i < rowsize;  i++)
 		assertion = testStep.addAssertion("XPath Match")
 		assertion.name = "Xpathmatch" //unique name
 		assertion.path = keyval[0]
-		assertion.expectedContent = keyval[1]	
+		assertion.expectedContent = keyval.drop(1).join("=")	
 		assertionsList = testStep.getAssertionList()
 		def r1
 		for( e in assertionsList){
