@@ -16,5 +16,5 @@ Next create a groovy step in soap ui under corresponding operation. and paste th
 Folder structure
 <basepath>/<project name>/test-input/test-data.csv
 <basepath>/<project name>/test-output/assertions.csv
-<basepath>/<project name>/test-output 
+<basepath>/<project name>/test-output  
 
