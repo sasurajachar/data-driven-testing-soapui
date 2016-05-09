@@ -21,5 +21,5 @@ Folder structure
                 -------test-input
                            test-data.csv
                            assertions.csv
-                -------test-output
+                -------test-output 
 
