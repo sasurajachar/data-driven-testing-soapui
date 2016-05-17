@@ -21,3 +21,6 @@ Folder structure
 
 [basepath]/[project name]/test-output  
 
+
+Kindly visit the [blog](it-test-automation.blogspot.in/2015/12/data-driven-testing-in-soapui-using.html)
+
