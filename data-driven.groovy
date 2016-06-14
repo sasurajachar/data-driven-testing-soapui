@@ -126,6 +126,9 @@ for(int i =1;  i < rowsize;  i++)
         	  log.info "empty"+"//"+datah[m]
             holder["//"+datah[m]] = ""
         }
+        else if(data[m]=="_pass"){
+			
+	}
         else{
         	datah[m]=datah[m].replaceAll('\\.', '/')
           holder["//"+datah[m]] = data[m]
