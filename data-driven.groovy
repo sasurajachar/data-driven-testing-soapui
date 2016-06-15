@@ -6,7 +6,6 @@ Author: sasurajachar@gmail.com
 \__ | (_) | (_| | |_) | (_| | |  | |\ V |  __/
 |___/\___/ \__,_| .__/ \__,_|_|  |_| \_/ \___|
                 |_|                           
-
 */
 Properties properties = new Properties() 
 //full Path to config.properties, having basepath and projectname ex: D:\\Groovy Test Result\\Request and Response\\config.properties
@@ -126,9 +125,9 @@ for(int i =1;  i < rowsize;  i++)
         	  log.info "empty"+"//"+datah[m]
             holder["//"+datah[m]] = ""
         }
-        else if(data[m]=="_pass"){
+		else if(data[m]=="_pass"){
 			
-	}
+		}
         else{
         	datah[m]=datah[m].replaceAll('\\.', '/')
           holder["//"+datah[m]] = data[m]
@@ -187,7 +186,6 @@ for(int i =1;  i < rowsize;  i++)
 	def assertion
 	for(asrt in asrtlist){
 		keyval=asrt.split("=")
-		//Ignore namespace
 		if(keyval[0].contains(":")){
 			namespace=keyval[0].substring(keyval[0].lastIndexOf("//"),keyval[0].indexOf(":"))
 			keyval[0]=keyval[0].replace(namespace,"//*")
@@ -195,25 +193,24 @@ for(int i =1;  i < rowsize;  i++)
 		assertion = testStep.addAssertion("XPath Match")
 		assertion.name = "Xpathmatch" //unique name
 		assertion.path = keyval[0]
-		assertion.expectedContent = keyval.drop(1).join("=")	
-		assertionsList = testStep.getAssertionList()
-		def r1
-		for( e in assertionsList){
-		log.info "Assertion [" + e.label + "] has status [" + e.status + "]"
-		if(e.errors==null){
-			r1="--TC"+i+"-success-"+"Assertion [" + e.label + "] has status [" + e.status + "]"
-			repFile.append(priMsg("s",r1))
-			log.info r1
-		}else{
-			for( m in e.errors ){
-				r2="TC"+i+"Error [" + m.message + "]"
-				repFile.append(priMsg("e",r2))
+		assertion.expectedContent = keyval[1]	
+		assertionsList = testStep.getAssertionList()		
+	}
+	def r1
+	for( e in assertionsList){
+			log.info "Assertion [" + e.label + "] has status [" + e.status + "]"
+			if(e.errors==null){
+				r1="--TC"+i+"-success-"+"Assertion [" + e.label + "] has status [" + e.status + "]"
+				repFile.append(priMsg("s",r1))
 				log.info r1
+			}else{
+				for( m in e.errors ){
+					r2="TC"+i+"Error [" + m.message + "]"
+					repFile.append(priMsg("e",r2))
+					log.info r1
+				}
 			}
 		}
-		}
-		
-	}
 	repFile.append("<div style='clear:both'>------------</div>")
    //closing report file
    repFile.append(repoend)
