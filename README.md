@@ -6,7 +6,7 @@ Folder structure
 
 [basepath]/[project name]/test-input/test-data.csv
 
-[basepath]/[project name]/test-output/assertions.csv
+[basepath]/[project name]/test-input/assertions.csv
 
 [basepath]/[project name]/test-output  
 
