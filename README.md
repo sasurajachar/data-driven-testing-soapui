@@ -11,7 +11,7 @@ Folder structure
 [basepath]/[project name]/test-output  
 
 
-First create test request under the operation, containing all the fields as per the wsdl.
+Open soap ui, import the wsdl. create test request under the operation, containing all the fields as per the wsdl.
 
 Next create a groovy step in soap ui under corresponding operation. and paste the data-driven.groovy and click run.
 
