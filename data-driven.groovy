@@ -8,7 +8,7 @@ Author: sasurajachar@gmail.com
                 |_|                           
 */
 
-//basepath of folder containing files
+//basepath of folder having test files
 def basepath = "<Enter the basepath here>”
 def projectname= "<Enter the operation name here>”
 basepath = basepath+projectname+"\\"
