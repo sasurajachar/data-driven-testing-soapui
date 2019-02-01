@@ -22,7 +22,7 @@ def exclded=[]
 def teststepname = "<Name of the test step on soap ui having all the fields>"
 //wait step (for capturing logs, make it as true) and set pauseInterval as 5 or more
 def pause= false
-def pauseInterval= 8
+def pauseInterval= 10
 
 //==========================================
 def groovyUtils = new com.eviware.soapui.support.GroovyUtils(context)
